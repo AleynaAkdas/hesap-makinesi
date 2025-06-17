@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+    <link rel="website icon" type="svg" href="/assets/img/calculator-solid.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=WDXL+Lubrifont+SC&family=WDXL+Lubrifont+TC&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="display">0</div>
+        <div class="buttons">
+            <button class="btn operator">+</button>
+            <button class="btn operator">-</button>
+            <button class="btn operator">x</button>
+            <button class="btn operator">/</button>
+
+            <button class="btn number">7</button>
+            <button class="btn number">8</button>
+            <button class="btn number">9</button>
+
+            <button class="btn clear">AC</button>
+            <button class="btn number">4</button>
+            <button class="btn number">5</button>
+            <button class="btn number">6</button>
+
+            <button class="btn del">Del</button>
+            
+            <button class="btn number">1</button>
+            <button class="btn number">2</button>
+            <button class="btn number">3</button>
+            <button class="btn equal">=</button>
+            <button class="btn number">0</button>
+            
+            <button class="btn dot">.</button>
+            <button class="btn history">⟲</button>
+        
+        </div>
+        <div id="historyPanel" class="history-panel">
+            <h3>Geçmiş</h3>
+            <div id="historyList" class="history-list"></div>
+            <button id="clearHistory" class="btn">Geçmişi Temizle</button>
+        </div>
+    </div>
+    <script src="/assets/script.js"></script>
+</body>
+
+</html>

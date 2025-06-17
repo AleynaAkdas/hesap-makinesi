@@ -1,0 +1,127 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  background-image: url(/assets/img/calculatorbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background-color: #4b1f011a;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.display {
+  font-size: 2rem;
+  background-color: #551d021a;
+  padding: 5px 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #422601;
+  justify-content: end;
+  display: flex;
+  border: 2px solid #572707;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 63px);
+  grid-auto-rows: 60px;
+  gap: 11px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.btn {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid #572707;
+  border-radius: 30%;
+  background-color: #7235196e;
+  color: #422601;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: box-shadow 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #8840289a;
+}
+
+.btn:active{
+  box-shadow:#cea883 3px 3px 6px 0px inset, rgba(63, 20, 0, 0.5) -3px -3px 6px 1px inset;
+}
+
+.equal {
+  grid-row: span 2;
+  background-color: #80200894;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.equal:hover {
+  background-color: #701c0794;
+}
+
+.history {
+  font-size: 1.3rem;
+}
+
+/* panel */
+.history-panel {
+  position: fixed;
+  background-color: #c78f6a85;
+  color: white;
+  border: 2px solid #572707;
+  border-radius: 15px;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-weight: 400;
+  color:  #422601;
+  margin: 6px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 769px) {
+  .history-panel {
+    top: 50%;
+    right: -260px;
+    transform: translateY(-50%);
+    width: 220px;
+     max-height: 150px;
+  }
+
+  .history-panel.show {
+    right: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-panel {
+    bottom: -400px;
+    left: 5%;
+    right: 5%;
+    width: auto;
+    transform: none;
+    border-radius: 20px;
+     max-height: 150px;
+  }
+
+  .history-panel.show {
+    bottom: 0;
+  }
+}
