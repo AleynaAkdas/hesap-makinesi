@@ -159,3 +159,27 @@ document.querySelector("#clearHistory").addEventListener("click", () => {
   localStorage.removeItem("calcHistory");
   updateHistory();
 });
+
+// klavye ile giriş yapılabilmesi için
+document.addEventListener("keydown", (e) => {
+  const key = e.key;
+
+  if (!isNaN(key)) {
+    handleNumber(key);
+  } else if (["+", "-", "*", "/"].includes(key)) {
+    handleOperator(key === "*" ? "x" : key);
+  } else if (key === "=" || key === "Enter") {
+    e.preventDefault(); // form varsa engelle
+    handleEqual();
+  } else if (key === "Backspace") {
+    deleteLast();
+  } else if (key === "Escape") {
+    clearAll();
+  } else if (key === ".") {
+    inputDecimal();
+  } else if (key.toLowerCase() === "h") {
+    toggleHistory();
+  }
+
+  updateDisplay();
+});

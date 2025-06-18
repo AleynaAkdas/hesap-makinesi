@@ -1,0 +1,26 @@
+/* WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #d4bfa1; /* açık kum tonu */
+}
+
+::-webkit-scrollbar-track {
+  background: #d4bfa1; /* açık track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8c5a35; /* koyu kahverengi thumb */
+  border-radius: 10px;
+  border: 2px solid #d4bfa1; /* thumb'a iç gölge efekti */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8673e; /* hover efekti */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8c5a35 #d4bfa1;
+}
